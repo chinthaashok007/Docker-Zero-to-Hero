@@ -1,7 +1,6 @@
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('demo.urls')),  # 👈 replace with your app folder name
+    path('', views.index, name='index'),
 ]
